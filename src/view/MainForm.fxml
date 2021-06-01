@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="378.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@css/MainFormStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
    <children>
-      <AnchorPane fx:id="pneAddNewStudent" prefHeight="93.0" prefWidth="318.0" styleClass="menu">
+      <AnchorPane fx:id="pneAddNewStudent" onKeyPressed="#pneAddNewStudent_OnKeyPress" prefHeight="93.0" prefWidth="318.0" styleClass="menu">
          <children>
             <Label layoutX="95.0" layoutY="56.0" text="Click to add a new student">
                <font>
@@ -28,7 +28,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="pneSearchStudents" prefHeight="93.0" prefWidth="318.0" styleClass="menu">
+      <AnchorPane fx:id="pneSearchStudents" onKeyPressed="#pneSearchStudents_OnKeyPress" prefHeight="93.0" prefWidth="318.0" styleClass="menu">
          <children>
             <Label layoutX="95.0" layoutY="56.0" text="Search, edit, delete students">
                <font>

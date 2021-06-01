@@ -1,4 +1,4 @@
-.menu:hover{
+.menu:hover, .menu:focused{
     -fx-border-color: #8b00ee;
     -fx-border-radius: 5px;
     -fx-cursor: hand;
