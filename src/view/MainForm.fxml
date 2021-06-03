@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXRippler?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="378.0" prefWidth="600.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@css/MainFormStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
-   <children>
-      <AnchorPane id="app-bar" fx:id="pneAppBar" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #8b00ee;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fx:id="imgClose" fitHeight="24.0" fitWidth="24.0" layoutX="562.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
-               <image>
-                  <Image url="@assets/icons/close.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="imgMinimize" fitHeight="24.0" fitWidth="24.0" layoutX="536.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="40.0">
-               <image>
-                  <Image url="@assets/icons/minimize.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <Label id="title" fx:id="lblTitle" alignment="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="35.0" prefWidth="582.0" text="Label" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
-            </Label>
-         </children>
-      </AnchorPane>
+    <children>
+        <AnchorPane id="app-bar" fx:id="pneAppBar" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #8b00ee;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="imgClose" fitHeight="24.0" fitWidth="24.0" layoutX="562.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                    <image>
+                        <Image url="@assets/icons/close.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="imgMinimize" fitHeight="24.0" fitWidth="24.0" layoutX="536.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="40.0">
+                    <image>
+                        <Image url="@assets/icons/minimize.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <Label id="title" fx:id="lblTitle" alignment="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="35.0" prefWidth="582.0" text="Label" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
+                </Label>
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="pneStage" layoutX="75.0" layoutY="78.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
 
-   </children>
+    </children>
 </AnchorPane>
