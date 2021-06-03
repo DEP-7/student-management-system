@@ -1,0 +1,24 @@
+[33m5e0bebc[m[33m ([m[1;31mbase/master[m[33m)[m Finalize the navigation system of the app
+[33m7d7b846[m Change the hover icon of the nav icon
+[33md900957[m Add nav button to the AppBar
+[33m6bbbfd6[m Add new navigation icons to the assets directory
+[33mc5e3706[m Add another method for centering the stage
+[33m3622561[m Finalize AppBar with navigation
+[33m1122797[m Enable navigation within other controllers
+[33m809fed7[m Store MainFormController within the scene and trying to access it from another controller
+[33mc350f44[m Introduce navigate method into the MainFormController
+[33m20cf7b4[m Add a glass effect to the app bar
+[33m0efb827[m Load HomeForm with MainForm
+[33mb57a799[m Add a secondary stage to the MainForm.fxml
+[33mf7ec8b0[m Fix errors in HomeForm.fxml
+[33m574bb0d[m Move some codes from MainFormController to HomeFormController
+[33m4cbf9c1[m Add HomeFormController and linked it with the fxml
+[33m8acc8fa[m Move some of main form content into new form called HomeForm.fxml
+[33ma638b52[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Remove .DS_Store files from the repo
+[33mcbc5869[m Add README.md and LICESNE files
+[33m8c43dec[m Implement custom title bar
+[33mc51420d[m Add StudentForm and SearchStudentForm with navigations
+[33mec98ef2[m Add keyboard navigation to the main form
+[33mb0c5fc3[m Setup the basics of main form
+[33mfa700b6[m Add main form
+[33m40a6247[m Initial commit
