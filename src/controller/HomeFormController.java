@@ -1,15 +1,10 @@
 package controller;
 
 import com.jfoenix.controls.JFXRippler;
-import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -61,7 +56,7 @@ public class HomeFormController {
 //            e.printStackTrace();
 //        }
         MainFormController ctrl = (MainFormController) pneAddNewStudent.getScene().getUserData();
-        ctrl.navigate(url,title);
+        ctrl.navigate(url, title, MainFormController.NAV_ICON_BACK);
     }
 
     public void pneAddNewStudent_OnKeyReleased(KeyEvent keyEvent) throws IOException {

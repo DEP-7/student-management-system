@@ -14,6 +14,11 @@ import java.io.IOException;
 
 public class MainFormController {
 
+    public static final int NAV_ICON_NONE = 0;
+    public static final int NAV_ICON_BACK = 1;
+    public static final int NAV_ICON_HOME = 2;
+
+    public ImageView imgNav;
     public ImageView imgClose;
     public ImageView imgMinimize;
     public AnchorPane pneAppBar;
@@ -21,13 +26,32 @@ public class MainFormController {
     public AnchorPane pneStage;
     private double xMousePos;
     private double yMousePos;
+    private int icon = NAV_ICON_NONE;
 
     public void initialize() throws IOException {
         initWindow();
     }
 
-    public void navigate(String url, String title) {
+    public void navigate(String url, String title, int icon) {
         try {
+            imgNav.setVisible(true);
+            this.icon = icon;
+
+            switch (icon) {
+                case NAV_ICON_NONE:
+                    imgNav.setVisible(false);
+                    imgNav.setUserData(null);
+                    break;
+                case NAV_ICON_HOME:
+                    imgNav.setImage(new Image("view/assets/icons/home.png"));
+                    imgNav.setUserData(new Image("view/assets/icons/home-hover.png"));
+                    break;
+                case NAV_ICON_BACK:
+                    imgNav.setImage(new Image("view/assets/icons/back.png"));
+                    imgNav.setUserData(new Image("view/assets/icons/back-hover.png"));
+                    break;
+            }
+
             Parent root = FXMLLoader.load(this.getClass().getResource(url));
             pneStage.getChildren().clear();
             pneStage.getChildren().add(root);
@@ -62,6 +86,9 @@ public class MainFormController {
             }
         });
 
+        imgNav.setOnMouseEntered(event -> swapNavIcon());
+        imgNav.setOnMouseExited(event -> swapNavIcon());
+
         imgClose.setOnMouseEntered(event -> imgClose.setImage(new Image("/view/assets/icons/close-hover.png")));
         imgClose.setOnMouseExited(event -> imgClose.setImage(new Image("/view/assets/icons/close.png")));
         imgClose.setOnMouseClicked(event -> ((Stage) (imgClose.getScene().getWindow())).close());
@@ -69,5 +96,13 @@ public class MainFormController {
         imgMinimize.setOnMouseEntered(event -> imgMinimize.setImage(new Image("/view/assets/icons/minimize-hover.png")));
         imgMinimize.setOnMouseExited(event -> imgMinimize.setImage(new Image("/view/assets/icons/minimize.png")));
         imgMinimize.setOnMouseClicked(event -> ((Stage) (imgClose.getScene().getWindow())).setIconified(true));
+    }
+
+    private void swapNavIcon() {
+        if (icon != NAV_ICON_NONE) {
+            Image temp = imgNav.getImage();
+            imgNav.setImage((Image) imgNav.getUserData());
+            imgNav.setUserData(temp);
+        }
     }
 }
