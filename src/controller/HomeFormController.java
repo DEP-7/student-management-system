@@ -43,20 +43,8 @@ public class HomeFormController {
     }
 
     private void navigate(String title, String url) {
-//        try {
-//            Parent root = FXMLLoader.load(this.getClass().getResource(url));
-//            Scene addNewStudentScene = new Scene(root);
-//            Stage primaryStage = (Stage) (rprAddNewStudent.getScene().getWindow());
-//            primaryStage.setResizable(true);
-//            primaryStage.setScene(addNewStudentScene);
-//            primaryStage.setTitle(title);
-//            primaryStage.centerOnScreen();
-//            Platform.runLater(() -> primaryStage.setResizable(false));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         MainFormController ctrl = (MainFormController) pneAddNewStudent.getScene().getUserData();
-        ctrl.navigate(url, title, MainFormController.NAV_ICON_BACK);
+        ctrl.navigate(url, title, MainFormController.NAV_ICON_BACK, () -> ctrl.navigate("/view/HomeForm.fxml","Student Management System", MainFormController.NAV_ICON_HOME));
     }
 
     public void pneAddNewStudent_OnKeyReleased(KeyEvent keyEvent) throws IOException {

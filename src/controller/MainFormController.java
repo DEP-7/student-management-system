@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import util.NavActionListner;
 
 import java.io.IOException;
 
@@ -27,15 +28,21 @@ public class MainFormController {
     private double xMousePos;
     private double yMousePos;
     private int icon = NAV_ICON_NONE;
+    private NavActionListner navActionListner = null;
 
     public void initialize() throws IOException {
         initWindow();
     }
 
     public void navigate(String url, String title, int icon) {
+        navigate(url, title, icon, null);
+    }
+
+    public void navigate(String url, String title, int icon, NavActionListner navActionListner) {
         try {
             imgNav.setVisible(true);
             this.icon = icon;
+            this.navActionListner = navActionListner;
 
             switch (icon) {
                 case NAV_ICON_NONE:
@@ -88,6 +95,11 @@ public class MainFormController {
 
         imgNav.setOnMouseEntered(event -> swapNavIcon());
         imgNav.setOnMouseExited(event -> swapNavIcon());
+        imgNav.setOnMouseClicked(event -> {
+            if (navActionListner != null) {
+                navActionListner.handle();
+            }
+        });
 
         imgClose.setOnMouseEntered(event -> imgClose.setImage(new Image("/view/assets/icons/close-hover.png")));
         imgClose.setOnMouseExited(event -> imgClose.setImage(new Image("/view/assets/icons/close.png")));
