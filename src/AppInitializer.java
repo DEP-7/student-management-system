@@ -28,7 +28,6 @@ public class AppInitializer extends Application {
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("Student Management System");
-        primaryStage.setResizable(false);
         primaryStage.show();
         primaryStage.centerOnScreen();
     }

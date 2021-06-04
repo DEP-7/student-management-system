@@ -32,6 +32,11 @@ public class MainFormController {
             pneStage.getChildren().clear();
             pneStage.getChildren().add(root);
             lblTitle.setText(title);
+            Stage primaryStage = (Stage) (pneStage.getScene().getWindow());
+            Platform.runLater(() -> {
+                primaryStage.sizeToScene();
+                primaryStage.centerOnScreen();
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
