@@ -1,3 +1,4 @@
+import controller.MainFormController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,8 +17,12 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/MainForm.fxml"));
+        //Parent root = FXMLLoader.load(this.getClass().getResource("/view/MainForm.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/view/MainForm.fxml"));
+        Parent root = fxmlLoader.load();
         Scene mainScene = new Scene(root);
+        MainFormController ctrl = fxmlLoader.getController();
+        ctrl.navigate();
         mainScene.setFill(Color.TRANSPARENT);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(mainScene);

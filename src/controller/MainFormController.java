@@ -24,9 +24,15 @@ public class MainFormController {
 
     public void initialize() throws IOException {
         initWindow();
+    }
 
-        Parent root = FXMLLoader.load(this.getClass().getResource("../view/HomeForm.fxml"));
-        pneStage.getChildren().add(root);
+    public void navigate(){
+        try {
+            Parent root =  FXMLLoader.load(this.getClass().getResource("../view/HomeForm.fxml"));
+            pneStage.getChildren().add(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initWindow() {
