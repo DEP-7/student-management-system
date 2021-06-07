@@ -1,8 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="616.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
-
+<AnchorPane prefHeight="616.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@css/StudentFormStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+    <children>
+        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="174.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/Student%20Registration.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="235.0" layoutY="18.0" text="Add New Student">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="16.0" layoutY="89.0" prefHeight="57.0" prefWidth="566.0">
+            <children>
+                <TextField fx:id="txtNic" accessibleText="NIC" prefHeight="26.0" prefWidth="550.0" promptText="Eg. 931630377V" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="168.0" prefHeight="57.0" prefWidth="566.0">
+         <children>
+            <TextField fx:id="txtFullName" accessibleText="Full Name" prefHeight="26.0" prefWidth="259.0" promptText="Eg. Dhanushka Chandimal" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="247.0" prefHeight="57.0" prefWidth="566.0">
+         <children>
+            <TextField fx:id="txtAddress" accessibleText="Address" prefHeight="26.0" prefWidth="259.0" promptText="Eg. Matara" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="326.0" prefHeight="57.0" prefWidth="292.0">
+         <children>
+            <TextField fx:id="txtDateOfBirth" accessibleText="Date of Birth" prefHeight="26.0" prefWidth="259.0" promptText="Eg. 1993-10-05" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="405.0" prefHeight="57.0" prefWidth="566.0">
+         <children>
+            <TextField fx:id="txtContactNumber" accessibleText="Contact Number" prefHeight="26.0" prefWidth="259.0" promptText="Eg. 0716520080" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="484.0" prefHeight="57.0" prefWidth="566.0">
+         <children>
+            <TextField fx:id="txtEmail" accessibleText="Email Address" prefHeight="26.0" prefWidth="259.0" promptText="Eg. @gmail.com" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblAge" layoutX="341.0" layoutY="342.0" prefHeight="20.0" prefWidth="253.0" text="Enter DOB to display age">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="215.0" layoutY="559.0" prefHeight="36.0" prefWidth="172.0" style="-fx-text-fill: #3700B3;" text="ADD NEW STUDENT" />
+    </children>
 </AnchorPane>

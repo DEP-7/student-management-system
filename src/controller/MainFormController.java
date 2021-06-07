@@ -111,7 +111,7 @@ public class MainFormController {
     }
 
     private void swapNavIcon() {
-        if (icon != NAV_ICON_NONE) {
+        if (icon != NAV_ICON_NONE && navActionListner!= null) {
             Image temp = imgNav.getImage();
             imgNav.setImage((Image) imgNav.getUserData());
             imgNav.setUserData(temp);
