@@ -12,11 +12,16 @@ public class MaterialUI {
         for (TextField txt : textFields) {
             AnchorPane pneTextContainer = (AnchorPane) txt.getParent();
             String floatedText = txt.getAccessibleText();
-            Canvas canvas = new Canvas(pneTextContainer.getPrefWidth(), pneTextContainer.getPrefHeight());
+            Canvas canvas = new Canvas();
             GraphicsContext ctx = canvas.getGraphicsContext2D();
 
             pneTextContainer.getChildren().add(0, canvas);
-            redrawTextFieldCanvas(canvas, ctx, floatedText, false);
+
+            pneTextContainer.layoutBoundsProperty().addListener((observable, oldValue, newValue) -> {
+                canvas.setWidth(newValue.getWidth());
+                canvas.setHeight(newValue.getHeight());
+                redrawTextFieldCanvas(canvas, ctx, floatedText, false);
+            });
 
             txt.focusedProperty().addListener((observable, oldValue, newValue) -> {
                 redrawTextFieldCanvas(canvas, ctx, floatedText, newValue);
@@ -25,7 +30,6 @@ public class MaterialUI {
                 txt.requestFocus();
             });
         }
-
     }
 
     private static void redrawTextFieldCanvas(Canvas canvas, GraphicsContext ctx, String floatedText, boolean focus) {
@@ -34,7 +38,7 @@ public class MaterialUI {
         //        ctx.setLineWidth(2);
         ctx.strokeRoundRect(2, 2, canvas.getWidth() - 4, canvas.getHeight() - 4, 10, 10);
         ctx.setFill(Color.WHITE);
-        ctx.fillRect(10, 0, new Text(floatedText).getLayoutBounds().getWidth() + 5, 20);
+        ctx.fillRect(10, 0, new Text(floatedText).getLayoutBounds().getWidth() + 10, 20);
         ctx.setFill(focus ? Color.valueOf("#6200EE") : Color.rgb(0, 0, 0, 0.6));
         ctx.fillText(floatedText, 15, 10);
     }

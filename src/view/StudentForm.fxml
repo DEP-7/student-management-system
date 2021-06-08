@@ -45,9 +45,9 @@
             </TextField>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="16.0" layoutY="326.0" prefHeight="57.0" prefWidth="292.0">
+      <AnchorPane layoutX="16.0" layoutY="326.0" prefHeight="57.0" prefWidth="181.0">
          <children>
-            <TextField fx:id="txtDateOfBirth" accessibleText="Date of Birth" prefHeight="26.0" prefWidth="259.0" promptText="Eg. 1993-10-05" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+            <TextField fx:id="txtDateOfBirth" accessibleText="Date of Birth" prefHeight="26.0" prefWidth="227.0" promptText="Eg. 1993-10-05" style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font size="16.0" />
                </font>
@@ -72,7 +72,7 @@
             </TextField>
          </children>
       </AnchorPane>
-      <Label fx:id="lblAge" layoutX="341.0" layoutY="342.0" prefHeight="20.0" prefWidth="253.0" text="Enter DOB to display age">
+      <Label fx:id="lblAge" layoutX="222.0" layoutY="342.0" prefHeight="20.0" prefWidth="372.0" text="Enter DOB to display age">
          <font>
             <Font size="16.0" />
          </font>
