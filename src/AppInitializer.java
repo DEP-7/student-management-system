@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import util.AppBarIcon;
 
 import java.io.IOException;
 
@@ -24,7 +25,7 @@ public class AppInitializer extends Application {
         primaryStage.setScene(mainScene);
         MainFormController ctrl = fxmlLoader.getController();
         mainScene.setUserData(ctrl);
-        ctrl.navigate("../view/HomeForm.fxml", "Student Management System",MainFormController.NAV_ICON_HOME);
+        ctrl.navigate("../view/HomeForm.fxml", "Student Management System", AppBarIcon.NAV_ICON_HOME);
         mainScene.setFill(Color.TRANSPARENT);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setTitle("Student Management System");
